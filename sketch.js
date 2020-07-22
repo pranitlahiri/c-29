@@ -1,6 +1,12 @@
+const Engine = Matter.Engine
+const World = Matter.World
+const Bodies = Matter.Bodies
 function setup() {
   createCanvas(1200,600);
-  ground=new Ground(width/2,height,width,5)
+  Engine.create();
+  World = Engine.World();
+  ground = new Ground(width/2,height,width,5)
+  World.add(World.object)
 }
 
 function draw() {
